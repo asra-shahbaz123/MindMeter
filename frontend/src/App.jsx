@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
-import MoodForm from './components/MoodForm';
+import MoodForm from './Components/MoodForm';
 import MoodList from './components/MoodList';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { createMood, deleteMood, getMoods } from './services/api';
