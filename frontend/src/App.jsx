@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { AuthProvider, useAuth } from './context/AuthContext';
+import React, { useEffect, useState } from 'react';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
 import MoodForm from './components/MoodForm';
 import MoodList from './components/MoodList';
-import { getMoods, createMood, deleteMood } from './services/api';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import { createMood, deleteMood, getMoods } from './services/api';
 
 const AppContent = () => {
   const { user, logout, loading } = useAuth();
@@ -123,7 +123,7 @@ const AppContent = () => {
           className={`tab-button ${activeTab === 'add' ? 'active' : ''}`}
           onClick={() => setActiveTab('add')}
         >
-          ✨ Add Mood
+          ➕ Add Mood
         </button>
         <button 
           className={`tab-button ${activeTab === 'history' ? 'active' : ''}`}
